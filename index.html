@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMAKSON Solar Services</title>
+  <style>
+    :root {
+      --primary: #444;
+      --accent: #e6b800;
+      --bg: #f5f5f5;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--primary);
+    }
+
+    header {
+      background: linear-gradient(to right, #333, #555);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 span {
+      color: var(--accent);
+    }
+
+    .section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .dual-lang span:first-child {
+      color: #333;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .dual-lang span:last-child {
+      color: #a0522d;
+      display: block;
+      margin-top: 0.3rem;
+      font-style: italic;
+    }
+
+    .services, .respected {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      transform: scale(1);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .testimonials {
+      overflow-x: auto;
+      white-space: nowrap;
+      background: #eee;
+      padding: 1rem 0;
+    }
+
+    .scrolling {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 30s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
+
+    form {
+      max-width: 400px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea, button {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #cc9900;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to <span>AMAKSON</span> Solar Services</h1>
+    <p>Your trusted solar expert in Katsina State</p>
+  </header>
+
+  <section class="section dual-lang">
+    <h2><span>Our Services</span> <span>Ayyukanmu</span></h2>
+    <div class="services">
+      <div class="card"><h3>Installation<br><small>Shigarwa</small></h3></div>
+      <div class="card"><h3>Maintenance<br><small>Gyara</small></h3></div>
+      <div class="card"><h3>Supervision<br><small>Tsaro</small></h3></div>
+      <div class="card"><h3>Training<br><small>Horowa</small></h3></div>
+    </div>
+  </section>
+
+  <section class="section dual-lang">
+    <h2><span>Respected People of Katsina</span> <span>Mutanen Girmamawa na Katsina</span></h2>
+    <div class="respected">
+      <div class="card">
+        <img src="images/governor.jpg" alt="Governor of Katsina">
+        <h4>Governor Dikko Radda</h4>
+        <p>A visionary leading Katsina toward sustainable development and renewable energy adoption.</p>
+      </div>
+      <div class="card">
+        <img src="images/emir.jpg" alt="Emir of Katsina">
+        <h4>Emir Abdulmumini Usman</h4>
+        <p>A royal figure promoting peace, progress, and modern initiatives including clean energy.</p>
+      </div>
+      <div class="card">
+        <img src="images/respected1.jpg" alt="Respected Elder">
+        <h4>Alhaji Musa Bello</h4>
+        <p>Known for encouraging youth empowerment and solar training throughout Katsina State.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Customer Testimonials</h2>
+    <div class="testimonials">
+      <div class="scrolling" id="testimonial-container">
+        <span style="margin-right: 80px;">“AMAKSON installed my solar and it’s been perfect ever since.” – Zainab, Daura</span>
+        <span style="margin-right: 80px;">“Reliable and respectful service. Highly recommend!” – Abdullahi, Katsina</span>
+        <span style="margin-right: 80px;">“I learned a lot from the training program. God bless AMAKSON.” – Sulaiman, Funtua</span>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 2rem;">Leave a Review</h3>
+    <form onsubmit="addReview(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <textarea id="review" placeholder="Your Review" required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AMAKSON Solar Services | Powered by Dedication & Light</p>
+    <p>Contact: amaksonsolar@gmail.com</p>
+  </footer>
+
+  <script>
+    function addReview(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const review = document.getElementById("review").value;
+      const container = document.getElementById("testimonial-container");
+      const span = document.createElement("span");
+      span.textContent = `“${review}” – ${name}`;
+      span.style.marginRight = "80px";
+      container.appendChild(span);
+      document.getElementById("name").value = "";
+      document.getElementById("review").value = "";
+    }
+  </script>
+</body>
+
+</html>
