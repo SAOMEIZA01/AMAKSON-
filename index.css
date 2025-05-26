@@ -19,7 +19,7 @@
     }
 
     header {
-      background: linear-gradient(to right, #333, #555);
+      background-image: url('https://www.pexels.com/photo/man-in-blue-shirt-and-black-pants-sitting-on-roof-9875407/');
       color: white;
       padding: 2rem 1rem;
       text-align: center;
