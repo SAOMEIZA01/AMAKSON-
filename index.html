@@ -1,87 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMAKSON Solar Services</title>
+  <title>AMAKSON RENEWABLE & ENGINEERING COMPANY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css">
 </head>
-
+  
 <body>
   <header>
-    <h1>Welcome to <span>AMAKSON</span> Solar Services</h1>
-    <p>Your trusted solar expert in Katsina State</p>
+    <span style="font-size: 100%; color: #004d4d; background-color: rgb(255, 255, 255, 0.7); border-radius: 2px; padding: 2px 1vh;">AMAKSON</span> <br> <span style="font-size: 60%; color: black;">RENEWABLE ENERGY & ENGINEERING COMPANY</span><br><span class="highlight-native" style="text-shadow: 1px 1px 2px white; ";>Kamfanin Ingantawa & Injiniya</span>
   </header>
 
-  <section class="section dual-lang">
-    <h2><span>Our Services</span> <span>Ayyukanmu</span></h2>
+  <section class="section">
+    <h2>Our Services <span class="highlight-native">Ayyukan Mu</span></h2>
     <div class="services">
-      <div class="card"><h3>Installation<br><small>Shigarwa</small></h3></div>
-      <div class="card"><h3>Maintenance<br><small>Gyara</small></h3></div>
-      <div class="card"><h3>Supervision<br><small>Tsaro</small></h3></div>
-      <div class="card"><h3>Training<br><small>Horowa</small></h3></div>
+      <div class="service">Installation <br /><span class="highlight-native">Sanya Na'urori</span></div>
+      <div class="service">Maintenance <br /><span class="highlight-native">Gyara da Kula</span></div>
+      <div class="service">Supervision <br /><span class="highlight-native">Kulawa da Dubawa</span></div>
+      <div class="service">Training <br /><span class="highlight-native">Horon Kwarewa</span></div>
     </div>
   </section>
 
-  <section class="section dual-lang">
-    <h2><span>Respected People of Katsina</span> <span>Mutanen Girmamawa na Katsina</span></h2>
-    <div class="respected">
-      <div class="card">
-        <img src="images/governor.jpg" alt="Governor of Katsina">
-        <h4>Governor Dikko Radda</h4>
-        <p>A visionary leading Katsina toward sustainable development and renewable energy adoption.</p>
-      </div>
-      <div class="card">
-        <img src="images/emir.jpg" alt="Emir of Katsina">
-        <h4>Emir Abdulmumini Usman</h4>
-        <p>A royal figure promoting peace, progress, and modern initiatives including clean energy.</p>
-      </div>
-      <div class="card">
-        <img src="images/respected1.jpg" alt="Respected Elder">
-        <h4>Alhaji Musa Bello</h4>
-        <p>Known for encouraging youth empowerment and solar training throughout Katsina State.</p>
+  <section class="section">
+    <h2>What Our Clients Say <span class="highlight-native">Abinda Abokan Cinikin Mu Ke Fada</span></h2>
+    <div class="testimonials-container" id="testimonials">
+      <div class="testimonial">"AMAKSON gave me light when I needed it most. Professional and reliable!"</div>
+      <div class="testimonial">"Na shaida aiki mai kyau daga AMAKSON, gaskiya sun cancanci yabo!"</div>
+      <div class="testimonial">"My system has been running smoothly for 6 months thanks to their maintenance."</div>
+    </div>
+
+    <form onsubmit="addTestimonial(event)">
+      <h3>Leave a Review <span class="highlight-native">Ba da Ra'ayi</span></h3>
+      <input type="text" id="name" placeholder="Your Name / Sunanka" required />
+      <textarea id="review" placeholder="Your Review / Sharhinka" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  
+  <section class="section">
+    <h2>Founder <span class="highlight-native">Wanda ya kafa</span></h2>
+    <div class="founder">
+      <div style="border-bottom: 5px solid red;" class="person">
+        <img src="Fndimg.jpg" alt="Founder and CEO">
+        <div>
+          <strong>Engr. Abdulmajid M. Salis</strong><br>
+          The founder and CEO of AMAKSON Renewable Energy and Engineering Company
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <h2>Customer Testimonials</h2>
-    <div class="testimonials">
-      <div class="scrolling" id="testimonial-container">
-        <span style="margin-right: 80px;">“AMAKSON installed my solar and it’s been perfect ever since.” – Zainab, Daura</span>
-        <span style="margin-right: 80px;">“Reliable and respectful service. Highly recommend!” – Abdullahi, Katsina</span>
-        <span style="margin-right: 80px;">“I learned a lot from the training program. God bless AMAKSON.” – Sulaiman, Funtua</span>
+    <h2>Respected Figures in Katsina <span class="highlight-native">Manyan Mutanen Katsina</span></h2>
+    <div class="respected">
+      <div class="person">
+        <img src="Govkt.jpeg" alt="Gov. Radda">
+        <div>
+          <strong>Governor Dikko Radda</strong><br />
+          A visionary leader known for his developmental policies and commitment to youth empowerment.
+        </div>
+      </div>
+      <div class="person">
+        <img src="Emirkt.jpeg" alt="Emir of Katsina">
+        <div>
+          <strong>HRH Emir Abdulmumin Kabir Usman</strong><br />
+          A respected traditional leader devoted to the cultural heritage and peace of Katsina people.
+        </div>
+      </div>
+      <div class="person">
+        <img src="ElderIK-kt.jpeg" alt="Alhaji Ibrahim">
+        <div>
+          <strong>Alhaji Ibrahim Katsina</strong><br />
+          A distinguished elder, known for his wisdom, philanthropy, and contribution to solar adoption in the state.
+        </div>
       </div>
     </div>
-
-    <h3 style="margin-top: 2rem;">Leave a Review</h3>
-    <form onsubmit="addReview(event)">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <textarea id="review" placeholder="Your Review" required></textarea>
-      <button type="submit">Submit Review</button>
-    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 AMAKSON Solar Services | Powered by Dedication & Light</p>
-    <p>Contact: amaksonsolar@gmail.com</p>
+    &copy; 2025 AMAKSON Solar. All rights reserved.
   </footer>
 
   <script>
-    function addReview(e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value;
-      const review = document.getElementById("review").value;
-      const container = document.getElementById("testimonial-container");
-      const span = document.createElement("span");
-      span.textContent = `“${review}” – ${name}`;
-      span.style.marginRight = "80px";
-      container.appendChild(span);
-      document.getElementById("name").value = "";
-      document.getElementById("review").value = "";
+    function addTestimonial(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const review = document.getElementById('review').value;
+      const container = document.getElementById('testimonials');
+      const testimonial = document.createElement('div');
+      testimonial.className = 'testimonial';
+      testimonial.textContent = `"${review}" - ${name}`;
+      container.appendChild(testimonial);
+      event.target.reset();
     }
   </script>
 </body>
-
 </html>
